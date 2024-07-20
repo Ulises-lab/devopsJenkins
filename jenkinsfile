@@ -18,7 +18,7 @@ node {
 
     stage('Docker Build & Push') {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
-            def nuestraapp = docker.build("norman404/nodenewapp:${gitcommit}", ".")
+            def nuestraapp = docker.build("yafte10/my_repo_test:${gitcommit}", ".")
             nuestraapp.push()
         }
     }
